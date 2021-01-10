@@ -61,11 +61,32 @@ PRODUCT_PACKAGES += \
     
 # Missing dependencies needed in Halium
 PRODUCT_PACKAGES += \
-    libandroid \
-    libandroid_runtime \
     libnetutils \
     libril \
     libprotobuf-cpp-full \
     android.hardware.radio.deprecated@1.0 \
     android.hardware.bluetooth@1.0 \
-    minisfservice
+
+# Misc
+PRODUCT_PACKAGES += \
+    libandroid \
+    libandroid_runtime \
+    libdrm \
+    libion \
+    vendor.display.config@1.7
+
+# Media
+PRODUCT_PACKAGES += \
+    libmedia_omx \
+    android.frameworks.displayservice@1.0 \
+    drmserver \
+    mediadrmserver \
+    mediaextractor \
+    miniafservice
+
+PRODUCT_PACKAGES += \
+    sensorservice
+
+# HFD
+PRODUCT_PACKAGES += \
+    libhfd_api
