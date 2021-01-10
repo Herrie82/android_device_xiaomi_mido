@@ -58,3 +58,14 @@ PRODUCT_COPY_FILES += \
 # Lineage hardware
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.xiaomi_8953
+    
+# Missing dependencies needed in Halium
+PRODUCT_PACKAGES += \
+    libandroid \
+    libandroid_runtime \
+    libnetutils \
+    libril \
+    libprotobuf-cpp-full \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.bluetooth@1.0 \
+    minisfservice
