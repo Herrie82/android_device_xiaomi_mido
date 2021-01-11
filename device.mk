@@ -68,4 +68,5 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     android.hardware.radio.deprecated@1.0 \
     android.hardware.bluetooth@1.0 \
-    minisfservice
+    minisfservice \
+    libwpa_client
