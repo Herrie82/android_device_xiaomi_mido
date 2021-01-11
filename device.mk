@@ -64,8 +64,9 @@ PRODUCT_PACKAGES += \
     libnetutils \
     libril \
     libprotobuf-cpp-full \
-    android.hardware.radio.deprecated@1.0 \
     android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
 
 # Misc
 PRODUCT_PACKAGES += \
