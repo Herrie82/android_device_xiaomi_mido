@@ -58,3 +58,40 @@ PRODUCT_COPY_FILES += \
 # Lineage hardware
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.xiaomi_8953
+    
+# Missing dependencies needed in Halium
+PRODUCT_PACKAGES += \
+    libnetutils \
+    libril \
+    libprotobuf-cpp-full \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.bluetooth@1.0 \
+
+# Misc
+PRODUCT_PACKAGES += \
+    libandroid \
+    libandroid_runtime \
+    libdrm \
+    libion \
+    vendor.display.config@1.7
+
+# Media
+PRODUCT_PACKAGES += \
+    libmedia_omx \
+    android.frameworks.displayservice@1.0 \
+    drmserver \
+    mediadrmserver \
+    mediaextractor \
+    miniafservice \
+    libdroidmedia \
+    libminisf \
+    minimediaservice \
+    minisfservice \
+    libaudioflingerglue
+
+PRODUCT_PACKAGES += \
+    sensorservice
+
+# HFD
+PRODUCT_PACKAGES += \
+    libhfd_api

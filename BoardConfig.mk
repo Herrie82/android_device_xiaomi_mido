@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Halium requires BOARD_BUILD_SYSTEM_ROOT_IMAGE for non-Treble devices
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 # Target kernel, must be set before inheriting common tree
 TARGET_KERNEL_VERSION := 4.9
 
