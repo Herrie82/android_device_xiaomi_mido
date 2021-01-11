@@ -82,7 +82,12 @@ PRODUCT_PACKAGES += \
     drmserver \
     mediadrmserver \
     mediaextractor \
-    miniafservice
+    miniafservice \
+    libdroidmedia \
+    libminisf \
+    minimediaservice \
+    minisfservice \
+    libaudioflingerglue
 
 PRODUCT_PACKAGES += \
     sensorservice
