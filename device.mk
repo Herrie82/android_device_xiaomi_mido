@@ -87,7 +87,13 @@ PRODUCT_PACKAGES += \
     libminisf \
     minimediaservice \
     minisfservice \
-    libaudioflingerglue
+    libyuv \
+    libexif \
+    libsoftkeymasterdevice \
+    libpuresoftkeymasterdevice \
+    libdrm \
+    libion \
+    vibrator.default
 
 PRODUCT_PACKAGES += \
     sensorservice
