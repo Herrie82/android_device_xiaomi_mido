@@ -60,3 +60,11 @@ VENDOR_SECURITY_PATCH := 2018-11-01
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/mido/BoardConfigVendor.mk
+
+# Activate vndk-lite
+PRODUCT_TREBLE_LINKER_NAMESPACES_OVERRIDE := true
+# To avoid having a symlink vendor->system/vendor, build a vendor image
+BOARD_USES_VENDORIMAGE := true
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
+
