@@ -33,7 +33,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include <unistd.h>
-
 namespace qcamera {
 
 

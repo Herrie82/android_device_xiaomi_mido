@@ -1,4 +1,4 @@
-/* Copyright (c) 2015-2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2015-2018, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -30,9 +30,7 @@
 #define LOG_TAG "QCameraDisplay"
 
 // Camera dependencies
-
 #include <cutils/properties.h>
-
 extern "C" {
 #include "mm_camera_dbg.h"
 }
@@ -60,8 +58,8 @@ using ::android::Looper;
 #endif //USE_DISPLAY_SERVICE
 
 namespace qcamera {
-#ifndef USE_DISPLAY_SERVICE
 
+#ifndef USE_DISPLAY_SERVICE
 /*===========================================================================
  * FUNCTION   : vsyncEventReceiverCamera
  *
@@ -123,9 +121,7 @@ void* QCameraDisplay::vsyncThreadCamera(void * data)
     }
     return NULL;
 }
-
 #endif //USE_DISPLAY_SERVICE
-
 
 /*===========================================================================
  * FUNCTION   : QCameraDisplay
@@ -362,14 +358,12 @@ nsecs_t QCameraDisplay::computePresentationTimeStamp(nsecs_t frameTimeStamp)
     nsecs_t presentationTimeStamp = 0;
     int     expectedVsyncOffset   = 0;
     int     vsyncOffset;
-
 #ifdef USE_DISPLAY_SERVICE
     if(!isSyncing())
     {
        return 0;
     }
 #endif //USE_DISPLAY_SERVICE
-    
     if ( (mAvgVsyncInterval != 0) && (mVsyncTimeStamp != 0) ) {
         // Compute presentation time stamp in future as per the following formula
         // future time stamp = vfe time stamp +  N *  average vsync interval

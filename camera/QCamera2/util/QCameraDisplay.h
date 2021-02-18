@@ -1,4 +1,4 @@
-/* Copyright (c) 2015-2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2015-2018, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -29,7 +29,6 @@
 
 #ifndef __QCAMERADISPLAY_H__
 #define __QCAMERADISPLAY_H__
-
 #ifdef USE_DISPLAY_SERVICE
 #ifdef LIKELY
 #undef LIKELY
@@ -86,7 +85,6 @@ public:
     }
 
 #else //USE_DISPLAY_SERVICE
-
     static int   vsyncEventReceiverCamera(int fd, int events, void* data);
     static void* vsyncThreadCamera(void * data);
 #endif //USE_DISPLAY_SERVICE
@@ -110,7 +108,6 @@ private:
     // 30.2 fps vs display running at 60 fps.
     nsecs_t  mVfe_and_mdp_freq_wiggle_filter_max_ns;
     nsecs_t  mVfe_and_mdp_freq_wiggle_filter_min_ns;
-    
 #ifdef USE_DISPLAY_SERVICE
     bool     m_bInitDone;
     bool     m_bSyncing;
@@ -121,7 +118,7 @@ private:
     uint32_t  mThreadExit;
     android::DisplayEventReceiver  mDisplayEventReceiver;
 #endif //USE_DISPLAY_SERVICE
-    
+
 };
 
 }; // namespace qcamera

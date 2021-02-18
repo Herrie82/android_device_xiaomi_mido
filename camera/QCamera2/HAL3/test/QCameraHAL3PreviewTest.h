@@ -37,7 +37,7 @@ using namespace android;
 namespace qcamera {
 
 using ::android::hardware::camera::common::V1_0::helper::CameraMetadata;
-    
+
 class QCameraHAL3PreviewTest : public QCameraHAL3Test
 {
 private:
